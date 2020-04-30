@@ -1,27 +1,31 @@
 $(function(){
-  var callMeBtn = $('#call-me'),
+  const callMeBtn = $('#call-me'),
     callMe = $('#modal-callme'),
-    close = $('#close'),
-    up = $('#up');
+    kitchen = $('#kitchen'),
+    showerRoom = $('#shower-room'),
+    flat = $('#flat'),
+    office = $('#office'),
+    newBuild = $('#new-build'),
+    close = $('#close');
 
-  callMeBtn.on('click', function(){
+  function showModal(){
     callMe.fadeIn(100);
     callMe.css('display', 'flex');
-  });
+  };
+
+  callMeBtn.on('click', ()=> showModal() );
+  kitchen.on('click', ()=> showModal() );
+  showerRoom.on('click', ()=> showModal() );
+  flat.on('click', ()=> showModal() );
+  office.on('click', ()=> showModal() );
+  newBuild.on('click', ()=> showModal() );
+
 
   close.on('click', function(){
     $(this).parent().parent().fadeOut(100);
   });
 
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 350) {
-        up.fadeIn(500);
-    } else {
-        up.fadeOut(500);
-    }
-  }); 
-  up.on('click', function(){
-    console.log('d');
-    $('html, body').animate({"scrollTop":0},"slow");
-  });
+  
+
+  
 });

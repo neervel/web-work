@@ -37,10 +37,15 @@
       transition: 0.2s
     & img
       display: block
-  &__link
-    display: inline-block
-    font-size: 16px
+  &__button
+    padding: 0
+    border: none
+    background-color: rgba(255,255,255,0.1)
     position: relative
+    &:focus
+        outline: none
+    &:hover
+      cursor: pointer
     &:hover
       &::after
         height: 12px
@@ -55,6 +60,7 @@
       height: 3px
       background-color: $main-color
       transition: 0.2s
+      
   &s
     display: flex
     justify-content: space-between

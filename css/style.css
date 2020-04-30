@@ -422,6 +422,9 @@ a {
   .offer {
     background-size: cover;
   }
+  .offer__form input {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -537,6 +540,12 @@ a {
   font-size: 24px;
 }
 
+@media (max-width: 768px) {
+  .modal-dialog {
+    padding: 20px 30px;
+  }
+}
+
 .portfolio {
   background: #f5f5f5 url("../img/portfolio/portfolio_bg.png") repeat-y center left;
   background-size: 50%;
@@ -626,17 +635,26 @@ a {
   display: block;
 }
 
-.card__link {
-  display: inline-block;
-  font-size: 16px;
+.card__button {
+  padding: 0;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
   position: relative;
 }
 
-.card__link:hover::after {
+.card__button:focus {
+  outline: none;
+}
+
+.card__button:hover {
+  cursor: pointer;
+}
+
+.card__button:hover::after {
   height: 12px;
 }
 
-.card__link:after {
+.card__button:after {
   content: "";
   position: absolute;
   z-index: -1;

@@ -4,8 +4,23 @@ $(function(){
   var card_3 = $('#card-3');
   var card_4 = $('#card-4');
   var card_5 = $('#card-5');
-  var card_6 = $('#card-6');  
+  var card_6 = $('#card-6');
+  var up = $('#up');
   
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 350) {
+        up.fadeIn(500);
+    } else {
+        up.fadeOut(500);
+    }
+  }); 
+  
+  up.on('click', function(){
+    console.log('d');
+    $('html, body').animate({"scrollTop":0},"slow");
+  });
+
   if ( $(window).width() < 1200 && $(window).width() > 768) {
       card_1.attr('data-wow-delay', "0.5s");
       card_1.css('animation-delay', '0.5s');
