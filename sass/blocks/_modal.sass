@@ -1,0 +1,61 @@
+.modal
+  display: none
+  background-color: black
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(#000, 0.5)
+  &-dialog
+    position: relative
+    margin: auto
+    max-width: 570px
+    width: 90%
+    min-width: 200px
+    background-color: #fff
+    padding: 80px 100px
+    & img
+      height: 15px
+      width: 15px
+    &__close
+      font-size: 20px
+      color: $border-input
+      position: absolute
+      border: none
+      background-color: #fff
+      top: 10px
+      right: 10px
+      &:hover
+        cursor: pointer
+      &:focus
+        outline: none
+  & form
+    &__input
+      width: 100%
+      &:first-child
+       margin-bottom: 15px
+      &:last-child
+        margin-bottom: 30px 
+  &-form
+    text-align: center
+    margin: auto
+    &__title
+      font-size: 22px
+      line-height: 33px
+      margin-bottom: 50px
+      +bold
+    &__subtitle
+      font-size: 16px
+      margin-bottom: 50px
+    &-footer
+      align-items: center
+      &-info
+        &__text
+          margin-bottom: 13px
+          font-size: 15px
+          display: block
+        &__phone
+          font-size: 24px
+
+

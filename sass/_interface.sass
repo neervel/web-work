@@ -1,0 +1,116 @@
+*
+  box-sizing: border-box
+body
+  +reg
+img
+  max-width: 100%
+.container
+  width: 1170px
+  margin: auto
+@media ( max-width: 1200px )
+  .container  
+    width: 740px
+@media ( max-width: 768px )
+  .container
+    max-width: 580px
+    width: 90%
+.button
+  border: none
+  border-radius: 10px
+  background-color: $main-color
+  padding: 18px 30px
+  +bold
+  &:hover
+    background-color: lighten($main-color, 10%)
+    cursor: pointer
+  &:focus
+    outline: none
+.section
+  padding: 90px 0
+  &-title
+    max-width: 700px
+    font-size: 24px;
+    text-align: center
+    +bold
+  &-subtitle
+    display: block
+    font-size: 16px
+  @media ( max-width: 768px )
+    padding: 40px 0    
+input
+  border: 1px solid $border-input
+  padding: 20px 26px
+  font-size: 15px
+  border-radius: 10px
+  &:hover
+    cursor: text
+  &:focus
+    outline: none
+.up
+  display: none
+  position: fixed
+  bottom: 35px
+  right: 35px
+  font-size: 10px
+  padding: 0
+  height: 60px
+  width: 60px
+  border-radius: 50%
+  & img
+    width: 30px
+    height: 30px
+.arrows
+  &__left, &__right
+    &:hover
+      cursor: pointer
+
+a
+  text-decoration: none
+  color: $text-color
+  +bold
+
+
+.form
+  &__input
+    margin-bottom: 30px
+    width: 100%
+    &:first-child
+      margin-right: 10px
+  &__button
+    width: 100%
+    padding: 26px 0
+    margin-bottom: 30px
+  &-footer
+    font-size: 15px
+    line-height: 24px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &__main-text 
+      max-width: 225px
+    &-info
+      display: flex
+      flex-flow: column 
+
+  @media  ( max-width: 1200px )
+    &__input
+      width: 100%
+      margin-bottom: 10px
+    &__button
+      font-size: 13px
+    &-footer
+      flex-flow: column
+      align-items: flex-start
+      text-align: left
+      &__main-text
+        max-width: 100%
+        margin-bottom: 18px
+      &-info__text
+        margin-bottom: 10px
+  @media  ( max-width: 768px )
+    &__input
+      margin-bottom: 8px
+      &:last-child
+        mb10
+    &__button
+      margin-bottom: 27px   
