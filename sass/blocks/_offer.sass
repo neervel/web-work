@@ -1,4 +1,6 @@
 .offer
+  & section
+    padding-top: 84px
   background: url('../img/offer/offer-bg.png') no-repeat
   background-position: center right
   background-size: contain
@@ -19,18 +21,28 @@
     text-align: left
     max-width: 350px
     line-height: 35px
-    margin-bottom: 24px
+    margin-bottom: 19px
   &__subtitle
     max-width: 250px
     margin-bottom: 30px
-  &__form input
-    width: 240px
+  &__form
+    & input
+      width: 240px
+      
+.input-box
+  display: flex
+  margin-bottom: 0px
+  flex-wrap: wrap
 
 @media  ( max-width: 1200px )
   .offer
     background-size: cover
     &__form input
       width: 100%
+    &-block
+      padding-right: 50px
+  .input-box
+    display: block
 @media  ( max-width: 768px )
   .offer
     background: #fff

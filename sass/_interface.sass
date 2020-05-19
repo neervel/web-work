@@ -56,9 +56,21 @@ input
   height: 60px
   width: 60px
   border-radius: 50%
+  background-color: lighten($main-color, 20%)
   & img
     width: 30px
     height: 30px
+  @media ( max-width: 768px )
+    bottom: 20px
+    right: 20px
+    height: 40px
+    width: 40px
+    border-radius: 50%
+    & img
+      width: 20px
+      height: 20px
+    
+
 .arrows
   &__left, &__right
     &:hover
@@ -72,8 +84,8 @@ a
 
 .form
   &__input
-    margin-bottom: 30px
     width: 100%
+    margin-bottom: 25px
     &:first-child
       margin-right: 10px
   &__button
@@ -91,6 +103,19 @@ a
     &-info
       display: flex
       flex-flow: column 
+    
+  input.invalid
+    border: 1px solid red
+    margin-bottom: 0
+  div.invalid
+    height: 15px
+    margin-bottom: 5px
+    margin-top: 5px
+    font-size: 12px
+    order: 2
+    flex-basis: 50%
+    text-align: center
+
 
   @media  ( max-width: 1200px )
     &__input
@@ -113,4 +138,4 @@ a
       &:last-child
         mb10
     &__button
-      margin-bottom: 27px   
+      margin-bottom: 27px

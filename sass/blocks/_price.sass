@@ -7,12 +7,60 @@
     margin-bottom: 59px
     text-align: center
   &__card
-    margin-bottom: 39px
+    margin-bottom: 39pх
+  &-footer
+    display: flex
+    flex-flow: column
+    align-items: center
+    text-align: center
+    &__title
+      font-size: 30px
+      line-height: 45px
+      margin-top: 100px
+      margin-bottom: 30px
+      +bold
+    &__subtitle
+      font-size: 20px
+      margin-bottom: 60px
+    &-cards
+      display: flex
+      align-items: top
+      justify-content: space-between
+    &-card
+      display: flex
+      align-items: center
+      flex-flow: column
+      padding-top: 11px
+      margin-right: 8px
+      margin-left: 8px
+      &:last-child
+        margin-right: 0
+      &:first-child
+        margin-left: 0
+      &__img
+        width: 100px
+        height: 100px
+        border: 3px solid $main-color
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        & img
+          width: 35px
+          height: 35px
+      &__text
+        font-size: 14px
+        line-height: 20px
+      &__next
+        height: 25px
+        width: 72px
+
 
 .card
   text-align: center
   border: 1.0px solid $card-border
   transition: 0.2s
+  margin-bottom: 30px
   &:hover
     box-shadow: 0px 20px 25px 0px rgba(0,0,0,0.1)
     .card__image:before
@@ -42,6 +90,7 @@
     border: none
     background-color: rgba(255,255,255,0.1)
     position: relative
+    +bold
     &:focus
         outline: none
     &:hover
@@ -59,11 +108,43 @@
       width: 100%
       height: 3px
       background-color: $main-color
-      transition: 0.2s
-      
+      transition: 0.2s  
   &s
     display: flex
     justify-content: space-between
     flex-wrap: wrap
     @media ( max-width: 1200px )
       justify-content: center
+
+@media ( max-width: 1200px )
+  .price
+    &__title
+      font-size: 18px      
+      margin-bottom: 27px
+    &__subtitle
+      font-size: 14px
+      margin-bottom: 60px
+    &-footer
+      &__title
+        font-size: 18px
+        line-height: 1.5
+        margin-top: 60px
+      &-cards
+        flex-wrap: wrap
+        justify-content: center
+      &-card
+        &__next
+          display: none
+
+  .card
+    width: 271px
+    height: 300px
+    margin: 15px
+    &__text
+      padding: 30px 40px
+    &__title
+      font-size: 14px
+      margin-bottom: 15px
+    &__button
+      font-size: 16px
+
